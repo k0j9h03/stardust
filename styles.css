@@ -1,0 +1,30 @@
+canvas {
+    display: block;
+    background-color: #111111; /* 캔버스 배경색 */
+}
+
+.box{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 70px;
+    color: white;
+}
+
+.vignette {
+    position: fixed; /* Fixes the vignette to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Make sure the vignette doesn't block interactions */
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+    z-index: 2; /* Ensure vignette is above the canvas */
+}
